@@ -34,5 +34,6 @@ for sigma in sigma_values:
 
     print(
         "sigma:", sigma,
+
         " similarity:", similarity
     )
