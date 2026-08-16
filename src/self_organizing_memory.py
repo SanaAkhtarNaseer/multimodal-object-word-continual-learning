@@ -15,6 +15,10 @@ class SelfOrganizingMemory:
 
         # Network starts with no nodes
         self.nodes = []
+        self.node_ids = []
+        self.next_node_id = 0
+
+
         self.edges = {}
         self.win_counts = []
         self.bandwidth_counts = []
@@ -90,6 +94,8 @@ class SelfOrganizingMemory:
     def create_node(self, input_vector, neighbor_indices=None):
         """Create a new node from the incoming sample."""
         self.nodes.append(input_vector.copy())
+        self.node_ids.append(self.next_node_id)
+        self.next_node_id += 1
         # M_k
         self.win_counts.append(1)
         # N_k
@@ -356,6 +362,9 @@ class SelfOrganizingMemory:
 
         # Remove node-specific information
         del self.nodes[node_index]
+        del self.node_ids[node_index]
+
+
         del self.win_counts[node_index]
         del self.bandwidth_counts[node_index]
         del self.bandwidths[node_index]
@@ -398,6 +407,7 @@ class SelfOrganizingMemory:
 
             return {
                 "action": "created",
+                "node_id": self.node_ids[0],
                 "winner": 0,
                 "distance": None
             }
@@ -411,6 +421,9 @@ class SelfOrganizingMemory:
                 first_winner,
                 input_vector
             )
+
+            learned_node_id = self.node_ids[first_winner]
+
             self.update_error(
                 first_winner,
                 first_distance
@@ -436,6 +449,7 @@ class SelfOrganizingMemory:
                 input_vector,
                 neighbor_indices=neighbor_indices
             )
+            learned_node_id = self.node_ids[-1]
 
             action = "created"
 
@@ -450,6 +464,7 @@ class SelfOrganizingMemory:
 
         return {
     "action": action,
+    "node_id": learned_node_id,
     "first_winner": first_winner,
     "second_winner": second_winner,
     "first_distance": first_distance,
