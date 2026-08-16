@@ -1,3 +1,5 @@
+from cv2 import threshold
+
 from src.self_organizing_memory import SelfOrganizingMemory
 from src.concept_memory import ConceptMemory
 from src.associative_memory import AssociativeMemory
@@ -24,20 +26,29 @@ class CDSN:
         self,
         sigma=1.0,
         threshold=0.30,
+        shape_threshold=None,
+        color_threshold=None,
         maintenance_interval=10
     ):
+
+        if shape_threshold is None:
+            shape_threshold = threshold
+            
+
+        if color_threshold is None:
+            color_threshold = threshold    
         # -------------------------
         # Receptive layer
         # -------------------------
         self.shape_memory = SelfOrganizingMemory(
             sigma=sigma,
-            threshold=threshold,
+            threshold=shape_threshold,
             maintenance_interval=maintenance_interval
         )
 
         self.color_memory = SelfOrganizingMemory(
             sigma=sigma,
-            threshold=threshold,
+            threshold=color_threshold,
             maintenance_interval=maintenance_interval
         )
 
