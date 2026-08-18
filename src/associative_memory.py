@@ -80,15 +80,45 @@ class AssociativeMemory:
     def recall_names(self, shape_symbol, color_symbol):
         """
         Recall auditory/name concepts from visual concepts.
-        """
-        for node in self.nodes:
-            if (
-                node["shape"] == shape_symbol
-                and node["color"] == color_symbol
-            ):
-                return list(node["names"])
 
-        return []
+        Associative nodes may be activated by matching symbols
+        from one or both visual properties. Exact shape + color
+        matches are preferred. If several nodes are activated,
+        the most frequently activated node is selected.
+        """
+
+        candidates = []
+
+        for node in self.nodes:
+
+            matches = 0
+
+            if node["shape"] == shape_symbol:
+                matches += 1
+
+            if node["color"] == color_symbol:
+                matches += 1
+
+            if matches > 0:
+                candidates.append(
+                    {
+                        "node": node,
+                        "matches": matches
+                    }
+                )
+
+        if not candidates:
+            return []
+
+        winner = max(
+            candidates,
+            key=lambda item: (
+                item["matches"],
+                item["node"]["count"]
+            )
+        )
+
+        return list(winner["node"]["names"])
 
 
     def recall_visual(self, name_symbol):
