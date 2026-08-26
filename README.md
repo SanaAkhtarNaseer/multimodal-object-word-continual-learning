@@ -1,4 +1,4 @@
-# CDSN — Cognitive Deep Self-Organizing Neural Network
+# Multimodal Object-Word Learning with a Topological Correntropy-Based ART Architecture
 
 An implementation of a brain-inspired, three-layer dual-pathway architecture for online, unsupervised acquisition of audio-visual object concepts, built upon a Topological Kernel CIM-based Adaptive Resonance Network (TC-ART).
 
