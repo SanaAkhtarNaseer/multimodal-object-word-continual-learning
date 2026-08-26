@@ -1,0 +1,22 @@
+{
+  "closed": {
+    "vision_mean": 0.9166666666666666,
+    "vision_std": 0.023570226039551553,
+    "auditory_mean": 0.5499999999999999,
+    "auditory_std": 0.07071067811865477,
+    "shape_nodes": 32.666666666666664,
+    "color_nodes": 14.333333333333334,
+    "name_nodes": 20.0,
+    "assoc_nodes": 83.66666666666667
+  },
+  "open_ended": {
+    "vision_mean": 0.7625000000000001,
+    "vision_std": 0.017677669529663678,
+    "auditory_mean": 0.48333333333333334,
+    "auditory_std": 0.02357022603955158,
+    "shape_nodes": 35.333333333333336,
+    "color_nodes": 16.666666666666668,
+    "name_nodes": 20.0,
+    "assoc_nodes": 97.33333333333333
+  }
+}

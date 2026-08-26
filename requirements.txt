@@ -1,1 +1,11 @@
-numpy==2.5.2
+# Core (required)
+numpy>=1.24
+
+# Real-image feature extraction (cdsn/features.py, dataset loader)
+opencv-python>=4.8
+
+# Figure 5 growth plots
+matplotlib>=3.6
+
+# Test suite
+pytest>=7.0

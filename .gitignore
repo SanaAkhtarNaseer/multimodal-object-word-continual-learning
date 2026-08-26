@@ -1,16 +1,100 @@
-# Python virtual environment
-.venv/
-
-# Python cache files
+# ---------------------------------------------------------------- Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+develop-eggs/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# VS Code local settings
+# ---------------------------------------------------- Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+virtualenv/
+
+# ------------------------------------------------------------ Testing
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.hypothesis/
+
+# --------------------------------------------------------------- Editors
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
 
-# Operating system files
+# -------------------------------------------------------------- Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---------------------------------------------------- Operating system
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# Experiment outputs generated locally
+# --------------------------------------------------------------- Datasets
+# Image corpora are regenerable via make_demo_images.py, or downloaded
+# separately (ALOI / COIL-100). See the README for the expected layout.
+data/
+aloi/
+coil-100/
+coil-20/
+*.zip
+*.tar.gz
+*.tar
+*.7z
+
+# ------------------------------------------------------- Generated media
+# Generated figures and tables under results/ ARE tracked: README.md embeds
+# results/growth.png, so excluding results/ would break the rendered README.
+# Stray image and video files elsewhere in the tree are not.
+/*.png
+/*.jpg
+/*.jpeg
+/*.mp4
+
+# ------------------------------------------------------------- Model files
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# -------------------------------------------------------------- Logs, temp
 *.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ------------------------------------------------------------- Credentials
+.env
+.env.local
+*.pem
+*.key
+secrets.json
