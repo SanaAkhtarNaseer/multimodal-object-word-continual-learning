@@ -291,25 +291,9 @@ model.node_counts()
 
 ---
 
-## 7. Background
 
-CDSN belongs to the developmental-robotics and cognitive-architecture literature, and draws specifically upon the following lines of work.
 
-**Adaptive Resonance Theory and the stability–plasticity dilemma** (Grossberg; Carpenter and Grossberg). The vigilance parameter is simultaneously ART's central mechanism and its principal hyperparameter difficulty, which the self-calibration scheme of §2.2 is intended to address.
-
-**CIM-based and topological ART** (Masuyama et al.). Correntropy-induced metrics and kernel-bandwidth adaptation in ART clustering, upon which TC-ART is directly modelled.
-
-**Convergence–Divergence Zones** (Damasio). The account of multimodal binding by association areas that neither store nor transmit modality-specific content, which motivates the design of Layer 3.
-
-**Incremental audio-visual cognitive architectures** (Xing et al., _An Autonomous Developmental Cognitive Architecture Based on Incremental Associative Neural Network With Dynamic Audiovisual Fusion_, IEEE Access, 2019). The immediate predecessor, sharing the three-layer sample/symbol/associative decomposition and the dynamically adjustable similarity threshold.
-
-**Self-organizing continual learning** (GWR and GSOM lineages). Architectures that grow structure incrementally but rely on predefined topologies and update rules, where CDSN self-calibrates its own threshold.
-
-_Complete citations should be inserted here from the thesis bibliography._
-
----
-
-## 8. Testing
+##7. Testing
 
 The suite comprises thirty tests addressing the mathematical properties on which the architecture depends, rather than smoke tests alone.
 
