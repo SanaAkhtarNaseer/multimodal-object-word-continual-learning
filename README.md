@@ -2,8 +2,7 @@
 
 An implementation of a brain-inspired, three-layer dual-pathway architecture for online, unsupervised acquisition of audio-visual object concepts, built upon a Topological Kernel CIM-based Adaptive Resonance Network (TC-ART).
 
-> MSc thesis implementation — SANA AKHTAR NASEER, _[UNIVERSITY OF CENTRAL PUNJAB_, _2023_
-> Supervisor: _Dr.FARHAN DAWOOD_
+
 
 <!-- Replace the bracketed fields above before publishing. -->
 
