@@ -202,8 +202,8 @@ Vision recall remains essentially flat across two orders of magnitude of resulti
 ### Installation
 
 ```bash
-git clone https://github.com/[USERNAME]/[REPO].git
-cd [REPO]/cdsn_project
+git clone https://github.com/SanaAkhtarNaseer/multimodal-object-word-continual-learning.git
+cd multimodal-object-word-continual-learning
 python -m venv venv && source venv/bin/activate    # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
